@@ -12,7 +12,7 @@ export const Wrapper = styled.main`
 `
 
 export const NameText = styled.h1`
-  color: white;
+  color: #ffa69e;
 `
 
 export const ContainerLinks = styled.div`
@@ -30,4 +30,9 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   color: white;
   font-size: 20px;
+  cursor: pointer;
+
+  :hover {
+    color: #ffa69e;
+  }
 `

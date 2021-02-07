@@ -3,6 +3,7 @@ import { Github } from '@styled-icons/bootstrap/Github'
 import { Linkedin } from '@styled-icons/bootstrap/Linkedin'
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export const MainContainer = styled.div`
   width: 100%;
@@ -58,23 +59,25 @@ export const DataWrapper = styled.div`
 
 export const ContainerSkills = styled.div``
 
-export const Cargo = styled.h1`
+export const Cargo = styled(motion.h1)`
   font-size: 3.3rem;
   margin-bottom: 0.5rem;
   color: #252525;
   opacity: 0.9;
 `
 
-export const Skills = styled.span`
+export const Skills = styled(motion.span)`
   font-size: 1.9rem;
   color: #252525;
   opacity: 0.9;
 `
-export const Description = styled.p`
-  margin-top: 1.2rem;
-  background-color: #f8f1f1;
+export const Description = styled(motion.p)`
+  margin-top: 1.5rem;
+  background-color: #ffa69e;
   padding: 7px;
   border-radius: 10px;
   color: #252525;
   opacity: 0.9;
+  right: 5px;
+  position: relative;
 `
