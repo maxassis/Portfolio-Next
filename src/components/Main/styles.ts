@@ -7,6 +7,7 @@ import Image from 'next/image'
 export const MainContainer = styled.div`
   width: 100%;
   height: 100vh;
+  background-color: #eaf2e3;
 `
 
 export const Wrapper = styled.div`
@@ -16,7 +17,6 @@ export const Wrapper = styled.div`
   height: calc(100vh - 5rem);
 `
 export const WrapperIcons = styled.div`
-  background-color: pink;
   display: grid;
   grid-gap: 20px;
   display: grid;
@@ -25,15 +25,24 @@ export const WrapperIcons = styled.div`
   align-content: center;
 `
 export const GitIcon = styled(Github)`
-  width: 40px;
+  width: 35px;
+  color: #252525;
+  opacity: 0.9;
+  cursor: pointer;
 `
 
 export const LinkedinIcon = styled(Linkedin)`
-  width: 40px;
+  width: 35px;
+  color: #252525;
+  opacity: 0.9;
+  cursor: pointer;
 `
 
 export const WhatsappIcon = styled(Whatsapp)`
-  width: 40px;
+  width: 35px;
+  color: #252525;
+  opacity: 0.9;
+  cursor: pointer;
 `
 
 export const Avatar = styled(Image)`
@@ -44,20 +53,28 @@ export const DataWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 5.5rem;
+  padding-left: 120px;
 `
 
 export const ContainerSkills = styled.div``
 
-export const Name = styled.h1`
-  font-size: 4rem;
-  margin-bottom: 0.6rem;
-`
-
 export const Cargo = styled.h1`
-  font-size: 2.8rem;
+  font-size: 3.3rem;
   margin-bottom: 0.5rem;
+  color: #252525;
+  opacity: 0.9;
 `
 
 export const Skills = styled.span`
-  font-size: 1.7rem;
+  font-size: 1.9rem;
+  color: #252525;
+  opacity: 0.9;
+`
+export const Description = styled.p`
+  margin-top: 1.2rem;
+  background-color: #f8f1f1;
+  padding: 7px;
+  border-radius: 10px;
+  color: #252525;
+  opacity: 0.9;
 `
