@@ -38,9 +38,19 @@ function About() {
             <S.Avatar src="/img/max.jpg" alt="My Image" />
 
             <S.ContainerAbout>
-              <S.Sobre>Sobre</S.Sobre>
+              <S.Sobre
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2 }}
+              >
+                Sobre
+              </S.Sobre>
               <S.ContainerDescription>
-                <S.Description>
+                <S.Description
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 2.8 }}
+                >
                   Desenvolvedor Front End com 1 ano de experiencia, em
                   desenvolvimento web e mobile, em 2020 conclui o bootcamp
                   Labenu de desenvolvimento web fullstack, com mais 1000 horas
