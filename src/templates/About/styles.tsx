@@ -61,8 +61,8 @@ export const ContainerAbout = styled.div``
 
 export const Sobre = styled(motion.h1)`
   font-size: 3.3rem;
-  margin-bottom: 0.5rem;
-  color: #252525;
+  margin-bottom: 1.2rem;
+  color: #29312e;
   opacity: 0.9;
 `
 
@@ -72,7 +72,7 @@ export const ContainerDescription = styled.div`
 
 export const Description = styled(motion.span)`
   opacity: 0.9;
-  color: #252525;
+  color: #29312e;
   margin-top: 1.5rem;
   font-size: 1.2rem;
   font-size: 1.6rem;
