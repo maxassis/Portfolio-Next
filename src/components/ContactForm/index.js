@@ -1,36 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-//import * as S from './styles'
-import styled from 'styled-components'
-
-const Formulario = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-`
-
-const Input = styled.input`
-  height: 40px;
-  border-radius: 7px;
-  border: none;
-  padding: 15px;
-`
-const Textarea = styled.textarea`
-  border-radius: 7px;
-  border: none;
-  height: 140px;
-  font-family: 'Poppins', sans-serif;
-  padding: 15px;
-`
-
-const Button = styled.button`
-  height: 40px;
-  width: 100px;
-  border-radius: 7px;
-  border: none;
-  align-self: center;
-  background-color: #ffa69e;
-`
+import * as S from './styles.js'
 
 export function ContactForm() {
   const [status, setStatus] = useState({
@@ -80,6 +50,7 @@ export function ContactForm() {
       data: inputs
     })
       .then((response) => {
+        alert('teste')
         handleServerResponse(
           true,
           'Thank you, your message has been submitted.'
@@ -91,8 +62,8 @@ export function ContactForm() {
   }
   return (
     <>
-      <Formulario onSubmit={handleOnSubmit}>
-        <Input
+      <S.Formulario onSubmit={handleOnSubmit}>
+        <S.Input
           id="name"
           type="text"
           name="_name"
@@ -101,7 +72,7 @@ export function ContactForm() {
           value={inputs.name}
           placeholder="Nome"
         />
-        <Input
+        <S.Input
           id="email"
           type="email"
           name="_replyto"
@@ -110,7 +81,7 @@ export function ContactForm() {
           value={inputs.email}
           placeholder="Email"
         />
-        <Textarea
+        <S.Textarea
           id="message"
           name="message"
           onChange={handleOnChange}
@@ -118,14 +89,14 @@ export function ContactForm() {
           value={inputs.message}
           placeholder="Mensagem"
         />
-        <Button type="submit" disabled={status.submitting}>
+        <S.Button type="submit" disabled={status.submitting}>
           {!status.submitting
             ? !status.submitted
               ? 'Envie'
               : 'Enviando'
             : 'Enviando...'}
-        </Button>
-      </Formulario>
+        </S.Button>
+      </S.Formulario>
       {status.info.error && (
         <div className="error">Error: {status.info.msg}</div>
       )}
@@ -133,3 +104,5 @@ export function ContactForm() {
     </>
   )
 }
+
+export default ContactForm
