@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import { Github } from '@styled-icons/bootstrap/Github'
 import { Linkedin } from '@styled-icons/bootstrap/Linkedin'
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { Email } from '@styled-icons/material/Email'
 
 export const MainContainer = styled.div`
   width: 100%;
@@ -46,7 +45,7 @@ export const WhatsappIcon = styled(Whatsapp)`
   cursor: pointer;
 `
 
-export const Avatar = styled(Image)`
+export const Avatar = styled.img`
   border-radius: 50%;
 `
 
@@ -56,28 +55,37 @@ export const DataWrapper = styled.div`
   gap: 5.5rem;
   padding-left: 120px;
 `
-
-export const ContainerSkills = styled.div``
-
-export const Cargo = styled(motion.h1)`
-  font-size: 3.3rem;
-  margin-bottom: 0.5rem;
-  color: #29312e;
-  opacity: 0.9;
+export const WrapperContact = styled.div`
+  display: grid;
+  grid-template-rows: 35% 1fr;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: center;
+  grid-auto-columns: 600px;
+`
+export const WrapperSocials = styled.div`
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
-export const Skills = styled(motion.span)`
-  font-size: 1.9rem;
-  color: #29312e;
-  opacity: 0.9;
+export const Git = styled(Github)`
+  width: 25px;
 `
-export const Description = styled(motion.p)`
-  margin-top: 1.5rem;
-  background-color: #ffa69e;
-  padding: 7px;
-  border-radius: 10px;
-  color: #29312e;
-  opacity: 0.9;
-  right: 5px;
-  position: relative;
+
+export const Mail = styled(Email)`
+  width: 25px;
 `
+
+export const Link = styled(Linkedin)`
+  width: 25px;
+`
+
+export const Contact = styled.p`
+  display: flex;
+  gap: 16px;
+  font-size: 20px;
+`
+export const WrapperForm = styled.div``

@@ -1,9 +1,9 @@
-import Header from 'components/Header'
 import * as S from './styles'
+import Header from 'components/Header'
 import { motion } from 'framer-motion'
-import Portfolio from 'components/Portfolio'
+import { ContactForm } from 'components/ContactForm'
 
-function Jobs() {
+function Contact() {
   return (
     <>
       <S.MainContainer>
@@ -35,20 +35,29 @@ function Jobs() {
               <S.WhatsappIcon />
             </motion.div>
           </S.WrapperIcons>
-          <S.DataWrapper>
-            <S.ContainerJobs>
-              <S.WrapperTitle>
-                <S.Title>Trabalhos</S.Title>
-              </S.WrapperTitle>
-              <S.WrapperPortfolio>
-                <Portfolio />
-              </S.WrapperPortfolio>
-            </S.ContainerJobs>
-          </S.DataWrapper>
+          <S.WrapperContact>
+            <S.WrapperSocials>
+              <S.Contact>
+                <S.Mail />
+                max.assis@outlook.com
+              </S.Contact>
+              <S.Contact>
+                <S.Link />
+                Max Assis
+              </S.Contact>
+              <S.Contact>
+                <S.Git />
+                maxassis
+              </S.Contact>
+            </S.WrapperSocials>
+            <S.WrapperForm>
+              <ContactForm />
+            </S.WrapperForm>
+          </S.WrapperContact>
         </S.Wrapper>
       </S.MainContainer>
     </>
   )
 }
 
-export default Jobs
+export default Contact
