@@ -1,6 +1,19 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import * as S from './styles.js'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+const notify = () =>
+  toast('🦄 Formulario enviado com sucesso', {
+    position: 'top-center',
+    autoClose: 6000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined
+  })
 
 export function ContactForm() {
   const [status, setStatus] = useState({
@@ -50,10 +63,10 @@ export function ContactForm() {
       data: inputs
     })
       .then((response) => {
-        alert('teste')
+        notify()
         handleServerResponse(
-          true,
-          'Thank you, your message has been submitted.'
+          true
+          // 'Thank you, your message has been submitted.'
         )
       })
       .catch((error) => {
@@ -93,7 +106,7 @@ export function ContactForm() {
           {!status.submitting
             ? !status.submitted
               ? 'Envie'
-              : 'Enviando'
+              : 'Enviado'
             : 'Enviando...'}
         </S.Button>
       </S.Formulario>
@@ -101,6 +114,19 @@ export function ContactForm() {
         <div className="error">Error: {status.info.msg}</div>
       )}
       {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      {/* Same as */}
+      <ToastContainer />
     </>
   )
 }
