@@ -2,12 +2,14 @@ import styled from 'styled-components'
 import { Github } from '@styled-icons/bootstrap/Github'
 import { Linkedin } from '@styled-icons/bootstrap/Linkedin'
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
+import media from 'styled-media-query'
+import Image from 'next/image'
 
 export const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: auto;
   background-color: #eaf2e3;
 `
 
@@ -16,6 +18,18 @@ export const Wrapper = styled.div`
   grid-template-columns: 6.5rem 1fr;
   width: 100%;
   height: calc(100vh - 5rem);
+
+  ${media.lessThan('large')`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `};
+
+  ${media.lessThan('small')`
+    gap: 50px;
+    padding: 0 30px;
+  `};
 `
 export const WrapperIcons = styled.div`
   display: grid;
@@ -24,6 +38,11 @@ export const WrapperIcons = styled.div`
   grid-auto-rows: min-content;
   justify-content: center;
   align-content: center;
+
+  ${media.lessThan('large')`
+    order: 1;
+    grid-auto-flow: column;
+  `}
 `
 export const GitIcon = styled(Github)`
   width: 35px;
@@ -46,8 +65,13 @@ export const WhatsappIcon = styled(Whatsapp)`
   cursor: pointer;
 `
 
-export const Avatar = styled(Image)`
+export const Avatar = styled.img`
   border-radius: 50%;
+  width: 210px;
+
+  ${media.lessThan('medium')`
+    width: 170px;
+  `}
 `
 
 export const DataWrapper = styled.div`
@@ -55,6 +79,15 @@ export const DataWrapper = styled.div`
   align-items: center;
   gap: 5.5rem;
   padding-left: 120px;
+
+  ${media.lessThan('large')`
+    flex-direction: column;
+    padding-left: 0px;
+  `}
+
+  ${media.lessThan('small')`
+  gap: 3rem;
+  `}
 `
 
 export const ContainerSkills = styled.div``
@@ -64,12 +97,21 @@ export const Cargo = styled(motion.h1)`
   margin-bottom: 0.5rem;
   color: #29312e;
   opacity: 0.9;
+
+  ${media.lessThan('small')`
+  font-size: 2.5rem;
+  
+  `}
 `
 
 export const Skills = styled(motion.span)`
-  font-size: 1.9rem;
+  font-size: 2.1rem;
   color: #29312e;
   opacity: 0.9;
+
+  ${media.lessThan('small')`
+  font-size: 1.5rem;
+  `}
 `
 export const Description = styled(motion.p)`
   margin-top: 1.5rem;

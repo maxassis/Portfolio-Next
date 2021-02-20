@@ -1,15 +1,24 @@
 import * as S from './styles'
+import Link from 'next/link'
 
 const Header = () => (
   <S.Wrapper>
     <div>
-      <S.NameText>Max Assis</S.NameText>
+      <Link href="/">
+        <S.NameText>Max Assis</S.NameText>
+      </Link>
     </div>
     <S.ContainerLinks>
       <S.Ul>
-        <S.Li>Portfolio</S.Li>
-        <S.Li>Sobre</S.Li>
-        <S.Li>Contato</S.Li>
+        <Link href="/trabalhos">
+          <S.Li>Portfolio</S.Li>
+        </Link>
+        <Link href="/sobre">
+          <S.Li>Sobre</S.Li>
+        </Link>
+        <Link href="/contato">
+          <S.Li>Contato</S.Li>
+        </Link>
       </S.Ul>
     </S.ContainerLinks>
   </S.Wrapper>

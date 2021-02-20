@@ -34,12 +34,7 @@ const Main = () => (
           </motion.div>
         </S.WrapperIcons>
         <S.DataWrapper>
-          <S.Avatar
-            src="/img/max.jpg"
-            alt="My Image"
-            width={210}
-            height={210}
-          />
+          <S.Avatar src="/img/max.jpg" alt="My Image" />
           <S.ContainerSkills>
             <S.Cargo
               initial={{ opacity: 0 }}

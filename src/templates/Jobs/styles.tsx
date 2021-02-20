@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Github } from '@styled-icons/bootstrap/Github'
 import { Linkedin } from '@styled-icons/bootstrap/Linkedin'
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp'
+import media from 'styled-media-query'
 
 export const MainContainer = styled.div`
   width: 100%;

@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
+import { Menu } from '@styled-icons/boxicons-regular/Menu'
 
 export const Wrapper = styled.main`
   width: 100%;
@@ -9,10 +11,19 @@ export const Wrapper = styled.main`
   padding: 0 60px;
   align-items: center;
   opacity: 0.9;
+
+  ${media.lessThan('medium')`
+    padding: 0 30px;
+  `}
+
+  ${media.lessThan('small')`
+    padding: 0 20px;
+  `}
 `
 
 export const NameText = styled.h1`
   color: #ffa69e;
+  cursor: pointer;
 `
 
 export const ContainerLinks = styled.div`
@@ -25,6 +36,14 @@ export const Ul = styled.ul`
   grid-auto-flow: column;
   list-style: none;
   grid-gap: 50px;
+
+  ${media.lessThan('medium')`
+    grid-gap: 25px;
+  `}
+
+  ${media.lessThan('small')`
+    display: none;
+  `}
 `
 
 export const Li = styled.li`
@@ -35,4 +54,12 @@ export const Li = styled.li`
   :hover {
     color: #ffa69e;
   }
+
+  ${media.lessThan('medium')`
+    font-size: 15px;
+  `}
+
+  ${media.lessThan('small')`
+    color: green;
+  `}
 `
