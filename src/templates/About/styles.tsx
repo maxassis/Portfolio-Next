@@ -3,6 +3,7 @@ import { Github } from '@styled-icons/bootstrap/Github'
 import { Linkedin } from '@styled-icons/bootstrap/Linkedin'
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp'
 import { motion } from 'framer-motion'
+import media from 'styled-media-query'
 
 export const MainContainer = styled.div`
   width: 100%;
@@ -15,6 +16,17 @@ export const Wrapper = styled.div`
   grid-template-columns: 6.5rem 1fr;
   width: 100%;
   height: calc(100vh - 5rem);
+
+  ${media.lessThan('large')`
+  padding: 0 30px;
+  gap: 50px;
+  `};
+
+  ${media.lessThan('medium')`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  `};
 `
 export const WrapperIcons = styled.div`
   display: grid;
@@ -23,6 +35,11 @@ export const WrapperIcons = styled.div`
   grid-auto-rows: min-content;
   justify-content: center;
   align-content: center;
+
+  ${media.lessThan('medium')`
+    order: 1;
+    grid-auto-flow: column;
+  `};
 `
 export const GitIcon = styled(Github)`
   width: 35px;
@@ -48,6 +65,10 @@ export const WhatsappIcon = styled(Whatsapp)`
 export const Avatar = styled.img`
   border-radius: 50%;
   width: 210px;
+
+  ${media.lessThan('medium')`
+    width: 170px;
+  `}
 `
 
 export const DataWrapper = styled.div`
@@ -55,6 +76,14 @@ export const DataWrapper = styled.div`
   align-items: center;
   gap: 5.5rem;
   padding-left: 120px;
+
+  ${media.lessThan('medium')`
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+   
+
+  `};
 `
 
 export const ContainerAbout = styled.div``
@@ -68,6 +97,12 @@ export const Sobre = styled(motion.h1)`
 
 export const ContainerDescription = styled.div`
   width: 60%;
+  text-align: justify;
+
+  ${media.lessThan('medium')`
+  width: 100%;
+
+    `};
 `
 
 export const Description = styled(motion.span)`

@@ -4,13 +4,17 @@ import { Linkedin } from '@styled-icons/bootstrap/Linkedin'
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp'
 import { motion } from 'framer-motion'
 import media from 'styled-media-query'
-import Image from 'next/image'
 
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+
   background-color: #eaf2e3;
+
+  ${media.lessThan('large')`
+  //height: 900px;
+  `};
 `
 
 export const Wrapper = styled.div`
@@ -24,11 +28,17 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  `};
-
-  ${media.lessThan('small')`
     gap: 50px;
     padding: 0 30px;
+    height: 600px;
+  `};
+
+  ${media.lessThan('large')`
+    padding-top: 80px;
+  `};
+
+  ${media.lessThan('medium')`
+    padding-top: 120px;
   `};
 `
 export const WrapperIcons = styled.div`
@@ -42,6 +52,7 @@ export const WrapperIcons = styled.div`
   ${media.lessThan('large')`
     order: 1;
     grid-auto-flow: column;
+    margin-bottom: 80px;
   `}
 `
 export const GitIcon = styled(Github)`
@@ -77,7 +88,7 @@ export const Avatar = styled.img`
 export const DataWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 5.5rem;
+  gap: 4.5rem;
   padding-left: 120px;
 
   ${media.lessThan('large')`
