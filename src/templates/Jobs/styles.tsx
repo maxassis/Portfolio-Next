@@ -16,6 +16,16 @@ export const Wrapper = styled.div`
   grid-template-rows: auto;
   width: 100%;
   height: auto;
+
+  ${media.lessThan('large')`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 0 30px;
+    height: auto;
+  `};
 `
 export const WrapperIcons = styled.div`
   display: grid;
@@ -23,6 +33,12 @@ export const WrapperIcons = styled.div`
   grid-auto-rows: min-content;
   justify-content: center;
   align-content: center;
+
+  ${media.lessThan('large')`
+    order: 1;
+    grid-auto-flow: column;
+    margin-bottom: 80px;
+  `}
 `
 export const GitIcon = styled(Github)`
   width: 35px;
@@ -54,11 +70,19 @@ export const WrapperPortfolio = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  ${media.lessThan('medium')`
+    display: grid;
+  `}
 `
 
 export const ContainerJobs = styled.div`
   width: 80%;
   height: 100vh;
+
+  ${media.lessThan('medium')`
+    width: 100%;
+  `}
 `
 
 export const WrapperTitle = styled.div`

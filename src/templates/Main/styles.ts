@@ -11,10 +11,6 @@ export const MainContainer = styled.div`
   width: 100%;
 
   background-color: #eaf2e3;
-
-  ${media.lessThan('large')`
-  //height: 900px;
-  `};
 `
 
 export const Wrapper = styled.div`
@@ -48,12 +44,6 @@ export const WrapperIcons = styled.div`
   grid-auto-rows: min-content;
   justify-content: center;
   align-content: center;
-
-  ${media.lessThan('large')`
-    order: 1;
-    grid-auto-flow: column;
-    margin-bottom: 80px;
-  `}
 `
 export const GitIcon = styled(Github)`
   width: 35px;

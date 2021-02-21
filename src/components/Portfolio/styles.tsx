@@ -1,19 +1,27 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const WrapperJob = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   width: 100%;
   height: 25rem;
-
   align-items: center;
   justify-content: center;
   gap: 25px;
+
+  ${media.lessThan('medium')`
+  grid-template-columns: auto;
+  `}
 `
 
 export const Image = styled.img`
   width: 460px;
   opacity: 0.9;
+
+  ${media.lessThan('medium')`
+  width: 100%;
+  `}
 `
 export const WrapperDescription = styled.div`
   width: 100%;

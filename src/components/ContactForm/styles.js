@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Formulario = styled.form`
   display: flex;
@@ -7,6 +8,7 @@ export const Formulario = styled.form`
 `
 
 export const Input = styled.input`
+  width: 100%;
   height: 40px;
   border-radius: 7px;
   border: none;
@@ -27,4 +29,8 @@ export const Button = styled.button`
   border: none;
   align-self: center;
   background-color: #ffa69e;
+
+  ${media.lessThan('medium')`
+    width:100%;
+  `}
 `
