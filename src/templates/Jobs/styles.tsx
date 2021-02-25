@@ -6,27 +6,17 @@ import media from 'styled-media-query'
 
 export const MainContainer = styled.div`
   width: 100%;
-  height: 146vh;
+  height: auto;
   background-color: #eaf2e3;
-`
-
-export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 6.5rem 1fr;
   grid-template-rows: auto;
-  width: 100%;
-  height: auto;
 
   ${media.lessThan('large')`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 0 30px;
-    height: auto;
+    grid-template-columns: 1fr;
   `};
 `
+
 export const WrapperIcons = styled.div`
   display: grid;
   grid-gap: 20px;
@@ -37,9 +27,13 @@ export const WrapperIcons = styled.div`
   ${media.lessThan('large')`
     order: 1;
     grid-auto-flow: column;
-    margin-bottom: 80px;
+  `};
+
+  ${media.between('medium', 'large')`
+  margin-top: 60px;
   `}
 `
+
 export const GitIcon = styled(Github)`
   width: 35px;
   color: #252525;
@@ -61,40 +55,12 @@ export const WhatsappIcon = styled(Whatsapp)`
   cursor: pointer;
 `
 
-export const DataWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
 export const WrapperPortfolio = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  width: 70%;
+  margin: 0 auto;
 
-  ${media.lessThan('medium')`
-    display: grid;
+  ${media.lessThan('large')`
+    width: 90%;
+    
   `}
-`
-
-export const ContainerJobs = styled.div`
-  width: 80%;
-  height: 100vh;
-
-  ${media.lessThan('medium')`
-    width: 100%;
-  `}
-`
-
-export const WrapperTitle = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 20rem;
-  padding-left: 30px;
-`
-
-export const Title = styled.h1`
-  font-size: 3.3rem;
-  color: #29312e;
-  opacity: 0.9;
 `

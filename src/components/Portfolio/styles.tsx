@@ -12,11 +12,24 @@ export const WrapperJob = styled.div`
 
   ${media.lessThan('medium')`
   grid-template-columns: auto;
+  grid-template-rows: repeat(2, auto);
+  height: 42%;
+  `}
+
+  ${media.lessThan('small')`
+  height: 44rem;
   `}
 `
 
+export const Title = styled.h1`
+  font-size: 3.3rem;
+  margin: 70px 0px;
+  color: #29312e;
+  opacity: 0.9;
+`
+
 export const Image = styled.img`
-  width: 460px;
+  width: 430px;
   opacity: 0.9;
 
   ${media.lessThan('medium')`
@@ -30,7 +43,6 @@ export const WrapperDescription = styled.div`
   flex-direction: column;
   gap: 20px;
 `
-
 export const JobTitle = styled.h1`
   color: #29312e;
   opacity: 0.9;
