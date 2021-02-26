@@ -5,7 +5,7 @@ import { Menu } from '@styled-icons/boxicons-regular/Menu'
 export const Wrapper = styled.main`
   width: 100%;
   height: 5rem;
-  background-color: #252525;
+  background-color: #243665;
   display: flex;
   justify-content: space-between;
   padding: 0 60px;
@@ -22,7 +22,7 @@ export const Wrapper = styled.main`
 `
 
 export const NameText = styled.h1`
-  color: #ffa69e;
+  color: #f2f5fa;
   cursor: pointer;
 `
 
