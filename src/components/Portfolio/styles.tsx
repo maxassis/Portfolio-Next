@@ -24,7 +24,7 @@ export const WrapperJob = styled.div`
 export const Title = styled.h1`
   font-size: 3.3rem;
   margin: 70px 0px;
-  color: #29312e;
+  color: #243665;
   opacity: 0.9;
 `
 
@@ -44,13 +44,13 @@ export const WrapperDescription = styled.div`
   gap: 20px;
 `
 export const JobTitle = styled.h1`
-  color: #29312e;
+  color: #243665;
   opacity: 0.9;
 `
 
 export const Description = styled.span`
   font-size: 14px;
-  color: #29312e;
+  color: #243665;
   opacity: 0.9;
 `
 
@@ -60,7 +60,7 @@ export const WrapperButtons = styled.div`
 `
 
 export const Button = styled.button`
-  background-color: #ffa69e;
+  background-color: #243665;
   border: none;
   color: white;
   display: flex;
@@ -70,4 +70,5 @@ export const Button = styled.button`
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  opacity: 0.9;
 `

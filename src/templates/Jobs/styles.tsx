@@ -7,10 +7,10 @@ import media from 'styled-media-query'
 export const MainContainer = styled.div`
   width: 100%;
   height: auto;
-  background-color: #eaf2e3;
   display: grid;
   grid-template-columns: 6.5rem 1fr;
   grid-template-rows: auto;
+  overflow: hidden;
 
   ${media.lessThan('large')`
     grid-template-columns: 1fr;
@@ -36,21 +36,21 @@ export const WrapperIcons = styled.div`
 
 export const GitIcon = styled(Github)`
   width: 35px;
-  color: #252525;
+  color: #243665;
   opacity: 0.9;
   cursor: pointer;
 `
 
 export const LinkedinIcon = styled(Linkedin)`
   width: 35px;
-  color: #252525;
+  color: #243665;
   opacity: 0.9;
   cursor: pointer;
 `
 
 export const WhatsappIcon = styled(Whatsapp)`
   width: 35px;
-  color: #252525;
+  color: #243665;
   opacity: 0.9;
   cursor: pointer;
 `

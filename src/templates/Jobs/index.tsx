@@ -6,8 +6,8 @@ import Portfolio from 'components/Portfolio'
 function Jobs() {
   return (
     <>
-      <Header />
       <S.MainContainer>
+        <Header />
         <S.WrapperIcons>
           <motion.div
             initial={{ x: -150 }}

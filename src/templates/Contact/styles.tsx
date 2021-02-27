@@ -8,7 +8,6 @@ import media from 'styled-media-query'
 export const MainContainer = styled.div`
   width: 100%;
   height: auto;
-  background-color: #eaf2e3;
 `
 
 export const Wrapper = styled.div`
@@ -44,6 +43,7 @@ export const WrapperIcons = styled.div`
   grid-auto-rows: min-content;
   justify-content: center;
   align-content: center;
+  z-index: -1;
 
   ${media.lessThan('large')`
     order: 1;
@@ -53,27 +53,28 @@ export const WrapperIcons = styled.div`
 `
 export const GitIcon = styled(Github)`
   width: 35px;
-  color: #252525;
+  color: #243665;
   opacity: 0.9;
   cursor: pointer;
 `
 
 export const LinkedinIcon = styled(Linkedin)`
   width: 35px;
-  color: #252525;
+  color: #243665;
   opacity: 0.9;
   cursor: pointer;
 `
 
 export const WhatsappIcon = styled(Whatsapp)`
   width: 35px;
-  color: #252525;
+  color: #243665;
   opacity: 0.9;
   cursor: pointer;
 `
 
 export const Avatar = styled.img`
   border-radius: 50%;
+  opacity: 0.9;
 `
 
 export const DataWrapper = styled.div`
@@ -124,5 +125,6 @@ export const Contact = styled.p`
   display: flex;
   gap: 16px;
   font-size: 20px;
+  color: #243665;
 `
 export const WrapperForm = styled.div``
