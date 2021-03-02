@@ -1,12 +1,16 @@
 import Header from 'components/Header'
 import * as S from './styles'
 import { motion } from 'framer-motion'
+import { useProxy } from 'valtio'
+import { state } from '../../utils/store'
 
 function About() {
+  const snapshot = useProxy(state)
+
   return (
     <>
-      <S.MainContainer>
-        <Header />
+      <Header />
+      <S.MainContainer hide={snapshot.toggle}>
         <S.Wrapper>
           <S.WrapperIcons>
             <motion.div
@@ -40,7 +44,7 @@ function About() {
               <S.Sobre
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 2 }}
+                transition={{ duration: 1 }}
               >
                 Sobre
               </S.Sobre>
@@ -48,7 +52,7 @@ function About() {
                 <S.Description
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 2.8 }}
+                  transition={{ duration: 1.5 }}
                 >
                   Desenvolvedor Front End com 1 ano de experiencia, em
                   desenvolvimento web e mobile, em 2020 conclui o bootcamp

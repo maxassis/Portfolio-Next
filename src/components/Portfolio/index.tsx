@@ -5,8 +5,18 @@ import * as S from './styles'
 function Portfolio() {
   return (
     <>
-      <S.Title>Trabalhos</S.Title>
-      <S.WrapperJob>
+      <S.Title
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        Trabalhos
+      </S.Title>
+      <S.WrapperJob
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <Tilt>
           <S.Image src="/img/spotenu.png" alt="Job Image" />
         </Tilt>
@@ -26,7 +36,11 @@ function Portfolio() {
           </S.WrapperButtons>
         </S.WrapperDescription>
       </S.WrapperJob>
-      <S.WrapperJob>
+      <S.WrapperJob
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <Tilt>
           <S.Image src="/img/spotenu.png" alt="Job Image" />
         </Tilt>

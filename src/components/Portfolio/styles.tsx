@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { motion } from 'framer-motion'
 
-export const WrapperJob = styled.div`
+export const WrapperJob = styled(motion.div)`
   display: grid;
   grid-template-columns: auto auto;
   width: 100%;
@@ -21,7 +22,7 @@ export const WrapperJob = styled.div`
   `}
 `
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   font-size: 3.3rem;
   margin: 70px 0px;
   color: #243665;

@@ -39,21 +39,21 @@ const Main = () => (
             <S.Cargo
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 2 }}
+              transition={{ duration: 1.5 }}
             >
               Desenvolvedor Web Front End
             </S.Cargo>
             <S.Skills
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 2.8 }}
+              transition={{ duration: 2.3 }}
             >
               Html | Css | Javascript | Typescript | Node | React | Next | Vue |
               Nuxt
               <S.Description
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 3.3 }}
+                transition={{ duration: 2.8 }}
               >
                 Desenvolvimento de aplicaçoes web, com foco na performance e
                 experiencia do usuario

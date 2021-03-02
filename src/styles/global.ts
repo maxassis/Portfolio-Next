@@ -67,7 +67,6 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family:  'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #ccf2f4;
-    overflow: hidden;
     
   }
 `

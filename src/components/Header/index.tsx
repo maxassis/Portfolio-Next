@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useProxy } from 'valtio'
 import * as S from './styles'
 import Link from 'next/link'
 import Tilt from 'react-parallax-tilt'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
+import { state } from '../../utils/store'
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const snapshot = useProxy(state)
 
   return (
     <S.Wrapper>
@@ -34,21 +35,27 @@ function Header() {
             </Link>
           </Tilt>
         </S.Ul>
-        <div onClick={() => setIsOpen(true)}>
+        <div onClick={() => (state.toggle = !state.toggle)}>
           <S.MenuIcon />
         </div>
       </S.ContainerLinks>
-      <S.MenuFull isOpen={isOpen}>
-        <CloseIcon onClick={() => setIsOpen(false)} />
+      <S.MenuFull isOpen={snapshot.toggle}>
+        <CloseIcon onClick={() => (state.toggle = !state.toggle)} />
         <S.ContainerMenus>
           <Link href="/trabalhos">
-            <S.Span>Trabalhos</S.Span>
+            <S.Span onClick={() => (state.toggle = !state.toggle)}>
+              Trabalhos
+            </S.Span>
           </Link>
           <Link href="/sobre">
-            <S.Span>Sobre</S.Span>
+            <S.Span onClick={() => (state.toggle = !state.toggle)}>
+              Sobre
+            </S.Span>
           </Link>
           <Link href="/contato">
-            <S.Span>Contato</S.Span>
+            <S.Span onClick={() => (state.toggle = !state.toggle)}>
+              Contato
+            </S.Span>
           </Link>
         </S.ContainerMenus>
       </S.MenuFull>

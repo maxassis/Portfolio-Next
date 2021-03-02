@@ -1,13 +1,21 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Github } from '@styled-icons/bootstrap/Github'
 import { Linkedin } from '@styled-icons/bootstrap/Linkedin'
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp'
 import { Email } from '@styled-icons/material/Email'
 import media from 'styled-media-query'
+import { motion } from 'framer-motion'
 
-export const MainContainer = styled.div`
-  width: 100%;
-  height: auto;
+type MainContainerProps = {
+  hide: boolean
+}
+
+export const MainContainer = styled.div<MainContainerProps>`
+  ${({ hide }) => css`
+    width: 100%;
+    height: auto;
+    display: ${hide ? 'none' : 'flex'};
+  `}
 `
 
 export const Wrapper = styled.div`
@@ -43,12 +51,11 @@ export const WrapperIcons = styled.div`
   grid-auto-rows: min-content;
   justify-content: center;
   align-content: center;
-  z-index: -1;
 
   ${media.lessThan('large')`
     order: 1;
     grid-auto-flow: column;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
   `}
 `
 export const GitIcon = styled(Github)`
@@ -101,7 +108,7 @@ export const WrapperContact = styled.div`
   width: 100%;
   `}
 `
-export const WrapperSocials = styled.div`
+export const WrapperSocials = styled(motion.div)`
   width: 100%;
   gap: 10px;
   display: flex;
@@ -127,4 +134,4 @@ export const Contact = styled.p`
   font-size: 20px;
   color: #243665;
 `
-export const WrapperForm = styled.div``
+export const WrapperForm = styled(motion.div)``

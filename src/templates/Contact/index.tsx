@@ -2,12 +2,16 @@ import * as S from './styles'
 import Header from 'components/Header'
 import { motion } from 'framer-motion'
 import { ContactForm } from 'components/ContactForm'
+import { useProxy } from 'valtio'
+import { state } from '../../utils/store'
 
 function Contact() {
+  const snapshot = useProxy(state)
+
   return (
     <>
-      <S.MainContainer>
-        <Header />
+      <Header />
+      <S.MainContainer hide={snapshot.toggle}>
         <S.Wrapper>
           <S.WrapperIcons>
             <motion.div
@@ -36,7 +40,11 @@ function Contact() {
             </motion.div>
           </S.WrapperIcons>
           <S.WrapperContact>
-            <S.WrapperSocials>
+            <S.WrapperSocials
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
               <S.Contact>
                 <S.Mail />
                 max.assis@outlook.com
@@ -50,7 +58,11 @@ function Contact() {
                 maxassis
               </S.Contact>
             </S.WrapperSocials>
-            <S.WrapperForm>
+            <S.WrapperForm
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5 }}
+            >
               <ContactForm />
             </S.WrapperForm>
           </S.WrapperContact>

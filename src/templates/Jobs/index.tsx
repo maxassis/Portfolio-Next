@@ -1,13 +1,17 @@
 import Header from 'components/Header'
 import * as S from './styles'
 import { motion } from 'framer-motion'
+import { useProxy } from 'valtio'
+import { state } from '../../utils/store'
 import Portfolio from 'components/Portfolio'
 
 function Jobs() {
+  const snapshot = useProxy(state)
+
   return (
     <>
-      <S.MainContainer>
-        <Header />
+      <Header />
+      <S.MainContainer hide={snapshot.toggle}>
         <S.WrapperIcons>
           <motion.div
             initial={{ x: -150 }}
