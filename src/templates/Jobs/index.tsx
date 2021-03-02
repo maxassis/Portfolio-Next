@@ -8,44 +8,35 @@ function Jobs() {
     <>
       <S.MainContainer>
         <Header />
-        <S.Wrapper>
-          <S.WrapperIcons>
-            <motion.div
-              initial={{ x: -150 }}
-              animate={{ x: 0 }}
-              transition={{ type: 'spring', stiffness: 100 }}
-              whileHover={{ scale: 1.3 }}
-            >
-              <S.GitIcon />
-            </motion.div>
-            <motion.div
-              initial={{ x: -150 }}
-              animate={{ x: 0 }}
-              transition={{ type: 'spring', stiffness: 120 }}
-              whileHover={{ scale: 1.3 }}
-            >
-              <S.LinkedinIcon />
-            </motion.div>
-            <motion.div
-              initial={{ x: -150 }}
-              animate={{ x: 0 }}
-              transition={{ type: 'spring', stiffness: 140 }}
-              whileHover={{ scale: 1.3 }}
-            >
-              <S.WhatsappIcon />
-            </motion.div>
-          </S.WrapperIcons>
-          <S.DataWrapper>
-            <S.ContainerJobs>
-              <S.WrapperTitle>
-                <S.Title>Trabalhos</S.Title>
-              </S.WrapperTitle>
-              <S.WrapperPortfolio>
-                <Portfolio />
-              </S.WrapperPortfolio>
-            </S.ContainerJobs>
-          </S.DataWrapper>
-        </S.Wrapper>
+        <S.WrapperIcons>
+          <motion.div
+            initial={{ x: -150 }}
+            animate={{ x: 0 }}
+            transition={{ type: 'spring', stiffness: 100 }}
+            whileHover={{ scale: 1.3 }}
+          >
+            <S.GitIcon />
+          </motion.div>
+          <motion.div
+            initial={{ x: -150 }}
+            animate={{ x: 0 }}
+            transition={{ type: 'spring', stiffness: 120 }}
+            whileHover={{ scale: 1.3 }}
+          >
+            <S.LinkedinIcon />
+          </motion.div>
+          <motion.div
+            initial={{ x: -150 }}
+            animate={{ x: 0 }}
+            transition={{ type: 'spring', stiffness: 140 }}
+            whileHover={{ scale: 1.3 }}
+          >
+            <S.WhatsappIcon />
+          </motion.div>
+        </S.WrapperIcons>
+        <S.WrapperPortfolio>
+          <Portfolio />
+        </S.WrapperPortfolio>
       </S.MainContainer>
     </>
   )

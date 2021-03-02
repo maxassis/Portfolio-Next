@@ -36,7 +36,6 @@ function About() {
           </S.WrapperIcons>
           <S.DataWrapper>
             <S.Avatar src="/img/max.jpg" alt="My Image" />
-
             <S.ContainerAbout>
               <S.Sobre
                 initial={{ opacity: 0 }}

@@ -5,6 +5,7 @@ import * as S from './styles'
 function Portfolio() {
   return (
     <>
+      <S.Title>Trabalhos</S.Title>
       <S.WrapperJob>
         <Tilt>
           <S.Image src="/img/spotenu.png" alt="Job Image" />
