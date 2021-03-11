@@ -40,13 +40,12 @@ export const WrapperIcons = styled.div`
   justify-content: center;
   align-content: center;
   order: 0;
-  z-index: -1;
 
   ${media.lessThan('large')`
   grid-auto-flow: column;
   order: 1;
   margin-top: 20px;
-    
+  margin-bottom: 20px;  
   `};
 `
 export const GitIcon = styled(Github)`
@@ -128,22 +127,4 @@ export const Description = styled(motion.p)`
   opacity: 0.9;
   right: 5px;
   position: relative;
-`
-
-export const MenuFull = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: red;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  overflow: hidden;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 1;
-  pointer-events: none;
-  z-index: 1;
 `

@@ -55,7 +55,7 @@ export const Li = styled.li`
   cursor: pointer;
 
   :hover {
-    color: #ffa69e;
+    color: #ccf2f4;
   }
 
   ${media.lessThan('medium')`
@@ -125,4 +125,10 @@ export const ContainerMenus = styled.div`
 export const Span = styled.span`
   font-size: 30px;
   color: #243665;
+  transition: ease;
+
+  &:hover {
+    font-size: 35px;
+    color: #f72585;
+  }
 `

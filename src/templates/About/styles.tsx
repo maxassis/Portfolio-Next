@@ -1,13 +1,20 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Github } from '@styled-icons/bootstrap/Github'
 import { Linkedin } from '@styled-icons/bootstrap/Linkedin'
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp'
 import { motion } from 'framer-motion'
 import media from 'styled-media-query'
 
-export const MainContainer = styled.div`
-  width: 100%;
-  height: 100vh;
+type MainContainerProps = {
+  hide: boolean
+}
+
+export const MainContainer = styled.div<MainContainerProps>`
+  ${({ hide }) => css`
+    width: 100%;
+    height: auto;
+    display: ${hide ? 'none' : 'flex'};
+  `}
 `
 
 export const Wrapper = styled.div`
@@ -19,12 +26,15 @@ export const Wrapper = styled.div`
   ${media.lessThan('large')`
   padding: 0 30px;
   gap: 50px;
+  
   `};
 
   ${media.lessThan('medium')`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: auto;
+    margin-top: 120px;
   `};
 `
 export const WrapperIcons = styled.div`
@@ -38,7 +48,8 @@ export const WrapperIcons = styled.div`
   ${media.lessThan('medium')`
     order: 1;
     grid-auto-flow: column;
-    z-index: -1;
+    //z-index: -1;
+    margin-bottom: 20px;  
   `};
 `
 export const GitIcon = styled(Github)`
