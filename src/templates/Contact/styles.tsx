@@ -55,7 +55,7 @@ export const WrapperIcons = styled.div`
   ${media.lessThan('large')`
     order: 1;
     grid-auto-flow: column;
-    margin-bottom: 20px;
+    margin-bottom: 86px;
   `}
 `
 export const GitIcon = styled(Github)`

@@ -1,11 +1,16 @@
 import Header from 'components/Header'
 import * as S from './styles'
 import { motion } from 'framer-motion'
+import { useProxy } from 'valtio'
+import { state } from '../../utils/store'
 
-const Main = () => (
-  <>
-    <S.MainContainer>
-      <Header />
+function Main() {
+  const snapshot = useProxy(state)
+
+  return (
+    <>
+  <Header />
+    <S.MainContainer hide={snapshot.toggle}>
       <S.Wrapper>
         <S.WrapperIcons>
           <motion.div
@@ -70,6 +75,7 @@ const Main = () => (
       </S.Wrapper>
     </S.MainContainer>
   </>
-)
+  )
+}
 
 export default Main
