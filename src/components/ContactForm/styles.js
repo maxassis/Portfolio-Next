@@ -25,13 +25,14 @@ export const Textarea = styled.textarea`
 
 export const Button = styled.button`
   height: 40px;
-  width: 100px;
+  width: 15rem;
   border-radius: 7px;
   border: none;
   align-self: center;
   background-color: #243665;
   color: #f2f5fa;
   font-weight: 900;
+  font-size: 15px;
 
   ${media.lessThan('medium')`
     width:100%;
