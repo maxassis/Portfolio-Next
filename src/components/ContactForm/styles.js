@@ -13,7 +13,11 @@ export const Input = styled.input`
   border-radius: 7px;
   border: none;
   padding: 15px;
-  background-color: #f2f5fa;
+  background-color: white;
+
+  :focus {
+    outline-color: #243665;
+  }
 `
 export const Textarea = styled.textarea`
   border-radius: 7px;
@@ -21,6 +25,11 @@ export const Textarea = styled.textarea`
   height: 140px;
   font-family: 'Poppins', sans-serif;
   padding: 15px;
+
+  :focus {
+    outline-color: #243665;
+  }
+
 `
 
 export const Button = styled.button`
@@ -33,6 +42,10 @@ export const Button = styled.button`
   color: #f2f5fa;
   font-weight: 900;
   font-size: 15px;
+
+  :focus {
+    outline-color: #243665;
+  }
 
   ${media.lessThan('medium')`
     width:100%;

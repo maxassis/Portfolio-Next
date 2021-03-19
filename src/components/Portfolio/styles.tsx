@@ -2,6 +2,13 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import { motion } from 'framer-motion'
 
+
+export const ContainerMain = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  
+`
 export const WrapperJob = styled(motion.div)`
   display: grid;
   grid-template-columns: auto auto;
@@ -10,6 +17,7 @@ export const WrapperJob = styled(motion.div)`
   align-items: center;
   justify-content: center;
   gap: 25px;
+ // margin-top: 25px;
 
   ${media.lessThan('medium')`
   grid-template-columns: auto;
@@ -19,6 +27,7 @@ export const WrapperJob = styled(motion.div)`
 
   ${media.lessThan('small')`
   height: 44rem;
+  gap: 13px;
   `}
 `
 
@@ -31,7 +40,8 @@ export const Title = styled(motion.h1)`
 
 export const Image = styled.img`
   width: 430px;
-  opacity: 0.9;
+  height: 233px;
+
 
   ${media.lessThan('medium')`
   width: 100%;
@@ -47,17 +57,26 @@ export const WrapperDescription = styled.div`
 export const JobTitle = styled.h1`
   color: #243665;
   opacity: 0.9;
+  font-size: 2.1rem;
 `
 
 export const Description = styled.span`
-  font-size: 14px;
+  font-size: 16px;
   color: #243665;
   opacity: 0.9;
+  text-align: justify;
 `
 
 export const WrapperButtons = styled.div`
   display: flex;
   gap: 13px;
+
+  ${media.lessThan('small')`
+  display: flex;
+  justify-content: center;
+
+  `}
+
 `
 
 export const Button = styled.button`
@@ -73,3 +92,5 @@ export const Button = styled.button`
   cursor: pointer;
   opacity: 0.9;
 `
+
+
