@@ -74,7 +74,7 @@ function Works() {
           <S.JobTitle>Spider-Man Ps5</S.JobTitle>
           <S.Description>
             <strong> Descrição: </strong> LandPage do Game Spider-man Miles Morales 
-            para Ps5, feito durante a semana FrontPush, utizilando Html, Javascript e Sass
+            para Ps5, feito durante a semana FrontPush, utilizando Html, Javascript e Sass
           </S.Description>
           <S.WrapperButtons>
             <Link href="https://spiderman-landpage.netlify.app" >
@@ -101,7 +101,7 @@ function Works() {
           <S.JobTitle>App Mobile Previsão do Tempo</S.JobTitle>
           <S.Description>
             <strong> Descrição: </strong> App Mobile feito com React Native e Expo, consumindo
-            as informaçoes metereologicas da API Hg Weather.
+            as informações metereologicas da API Hg Weather.
           </S.Description>
           <S.WrapperButtons>
             <a href="https://github.com/maxassis/previsao-do-tempo" style={{textDecoration: 'none'}} >
