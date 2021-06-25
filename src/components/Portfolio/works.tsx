@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import * as S from './styles'
 import Tilt from 'react-parallax-tilt'
 import { Github } from '@styled-icons/bootstrap/Github'
@@ -6,6 +7,60 @@ import Link from 'next/link'
 function Works() {
   return (
     <S.ContainerMain>
+
+    <S.WrapperJob
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Tilt>
+          <S.Image src="/img/ensinio.png" alt="Job Image" />
+        </Tilt>
+        <S.WrapperDescription>
+          <S.JobTitle>Ensinio</S.JobTitle>
+          <S.Description>
+            <strong> Descrição: </strong> Landing page da plataforma de cursos online Ensinio
+          </S.Description>
+          <S.WrapperButtons>
+            <Link href="http://ensinio-max.surge.sh" >
+            <S.Button>Web App</S.Button>
+            </Link>
+            <a href="https://github.com/maxassis/Ensinio" style={{textDecoration: 'none'}}>
+            <S.Button>
+              <Github style={{ height: '28px' }} />
+              Codigo Fonte
+            </S.Button>
+            </a>
+          </S.WrapperButtons>
+        </S.WrapperDescription>
+      </S.WrapperJob>
+
+      <S.WrapperJob
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Tilt>
+          <S.Image src="/img/maxlink.png" alt="Job Image" />
+        </Tilt>
+        <S.WrapperDescription>
+          <S.JobTitle>Max Link</S.JobTitle>
+          <S.Description>
+            <strong> Descrição: </strong> aplicativo mobile criado com React Native e Expo, o app utiliza a api do Bitly, para encurtar URLs digitadas pelo usuario.
+          </S.Description>
+          <S.WrapperButtons>
+            <a href="https://github.com/maxassis/MaxLink" style={{textDecoration: 'none'}}>
+            <S.Button>
+              <Github style={{ height: '28px' }} />
+              Codigo Fonte
+            </S.Button>
+            </a>
+          </S.WrapperButtons>
+        </S.WrapperDescription>
+      </S.WrapperJob>
+
+
+
       <S.WrapperJob
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -34,6 +89,8 @@ function Works() {
           </S.WrapperButtons>
         </S.WrapperDescription>
       </S.WrapperJob>
+
+
       <S.WrapperJob
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -45,7 +102,7 @@ function Works() {
         <S.WrapperDescription>
           <S.JobTitle>Spotenu</S.JobTitle>
           <S.Description>
-            <strong> Descrição: </strong> LandPage de um serviço ficticio de
+            <strong> Descrição: </strong> Landing Page de um serviço ficticio de
             streaming de audio, criado com ReactJs, utilizando Styled Components
             e React Hook Forms
           </S.Description>
@@ -62,6 +119,7 @@ function Works() {
           </S.WrapperButtons>
         </S.WrapperDescription>
       </S.WrapperJob>
+
       <S.WrapperJob
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -89,6 +147,8 @@ function Works() {
           </S.WrapperButtons>
         </S.WrapperDescription>
       </S.WrapperJob>
+
+
       <S.WrapperJob
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
